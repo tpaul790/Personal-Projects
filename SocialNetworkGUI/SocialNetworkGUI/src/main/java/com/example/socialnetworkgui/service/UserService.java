@@ -41,6 +41,10 @@ public class UserService extends Service<Integer, User, UserDbRepo> implements O
         user.ifPresent(u -> notify(new UserEntityChangeEvent(ChangeEventType.DELETE,u)));
     }
 
+    public void update(User user) throws ServiceException {
+        update(user.getId(), user.getUsername(), user.getEmail(), user.getPassword(), user.getRole(), user.getProfilePicture(), user.getAboutMe());
+    }
+
     public void update(int id, String username, String email, String password, String role, String path, String aboutMe) throws ServiceException {
         User user = new User(id, username, email, password, role);
         user.setProfilePicture(path);

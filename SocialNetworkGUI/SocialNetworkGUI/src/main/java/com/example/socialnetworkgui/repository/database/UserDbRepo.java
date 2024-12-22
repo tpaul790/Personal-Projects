@@ -42,7 +42,12 @@ public class UserDbRepo implements Repository2<Integer,User> {
                 String email = result.getString("email");
                 String password = result.getString("password");
                 String role = result.getString("role");
-                opUser = Optional.of(new User(id, username, email, password, role));
+                String profilePicture = result.getString("profilePicture");
+                String aboutMe = result.getString("aboutMe");
+                User user = new User(id, username, email, password, role);
+                user.setProfilePicture(profilePicture);
+                user.setAboutMe(aboutMe);
+                opUser = Optional.of(user);
             }
             result.close();
         }catch (SQLException e){
@@ -69,7 +74,6 @@ public class UserDbRepo implements Repository2<Integer,User> {
                 user.setProfilePicture(profilePicture);
                 user.setAboutMe(aboutMe);
                 opUser = Optional.of(user);
-
             }
             result.close();
         }catch (SQLException e){
@@ -90,7 +94,12 @@ public class UserDbRepo implements Repository2<Integer,User> {
                 String password = resultSet.getString("password");
                 String email = resultSet.getString("email");
                 String role = resultSet.getString("role");
-                users.add(new User(id,username,email,password,role));
+                String profilePicture = resultSet.getString("profilePicture");
+                String aboutMe = resultSet.getString("aboutMe");
+                User user = new User(id, username, email, password, role);
+                user.setProfilePicture(profilePicture);
+                user.setAboutMe(aboutMe);
+                users.add(user);
             }
         }catch(SQLException e){
             e.printStackTrace();
