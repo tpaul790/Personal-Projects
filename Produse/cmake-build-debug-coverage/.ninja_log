@@ -1,0 +1,18 @@
+# ninja log v5
+317	1172	1727789838580855007	CMakeFiles/Produse.dir/TableModel/TableModel.cpp.o	92c9bd31c240dd6a
+510	760	1727789838177405891	CMakeFiles/Produse.dir/Utilitati/utils.cpp.o	8e9fff5b548833de
+6	754	1727789838166541368	CMakeFiles/Produse.dir/Service/Service.cpp.o	711cedb6198f6ca6
+5	317	1727789837732657070	CMakeFiles/Produse.dir/Validator/Validator.cpp.o	9a90e0f1750434ab
+5	509	1727789837924188172	CMakeFiles/Produse.dir/Repo/RepoFile.cpp.o	c0f5673e3dc7f00a
+755	1132	1727789838547592517	CMakeFiles/Produse.dir/Abstract/ActiuneRedo.cpp.o	5fe403ae0da93012
+310	1649	1727789839062543340	CMakeFiles/Produse.dir/GUI/ProdusGui.cpp.o	cf1a7f4f344123cc
+1120	1498	1727789838913712786	CMakeFiles/Produse.dir/Observer/Observable.cpp.o	d33dfa2fa6f87465
+761	1745	1727789839159905713	CMakeFiles/Produse.dir/GUI/FiltreGui.cpp.o	c4b67e8258738e76
+1301	2080	1727789839494822837	CMakeFiles/Produse.dir/GUI/StatisticiGui.cpp.o	f4b638ea85890d7b
+724	1119	1727789838531839756	CMakeFiles/Produse.dir/Abstract/ActiuneUndo.cpp.o	93771246d978b6fe
+2115	2216	1727789839630243103	Produse	ef015d25ef3aa5fe
+4	1301	1727789838711791914	CMakeFiles/Produse.dir/main.cpp.o	8b3b563d91d0f7e1
+4	310	1727789837725031441	CMakeFiles/Produse.dir/Domain/Produs.cpp.o	e8d970eb19d5e8e6
+4	723	1727789838137242985	CMakeFiles/Produse.dir/Teste/teste.cpp.o	1cb5ca3ff431d725
+1132	1583	1727789838998905877	CMakeFiles/Produse.dir/Repo/CosProduse.cpp.o	e40a5b816d76f884
+1172	2115	1727789839530248673	CMakeFiles/Produse.dir/GUI/CosGui.cpp.o	604dd57ec7411931

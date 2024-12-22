@@ -1,0 +1,10 @@
+2a tableta ipad2 samsung 38 128
+1a telefon iphone12 apple 59 128
+4a telefon iphone15-pro apple 52 256
+8a casti airbuds samsung 6 1
+5a casti airpods-pro2 apple 31 1
+4b telefon iphone15-pro apple 24 256
+6a telefon s22 samsung 48 1024
+4d telefon iphone15-pro apple 1 1024
+3b laptop macbook-pro apple 67 512
+1b telefon iphone12 apple 59 128
