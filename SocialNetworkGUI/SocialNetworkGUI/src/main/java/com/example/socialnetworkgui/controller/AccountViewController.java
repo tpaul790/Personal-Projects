@@ -100,7 +100,7 @@ public class AccountViewController extends AbstractController implements Observe
 
     public void onMyPageButtonClick(ActionEvent actionEvent) {
         try{
-            MyPageViewController controller = (MyPageViewController) Utils.setSceneOnStage(getStage(),"myPage-view.fxml","Settings",525,428);
+            MyPageViewController controller = (MyPageViewController) Utils.setSceneOnStage(getStage(),"myPage-view.fxml","MyPage",525,428);
             Utils.setDataForController(controller,getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getFriendshipService().removeObserver(this);
         } catch (IOException e) {

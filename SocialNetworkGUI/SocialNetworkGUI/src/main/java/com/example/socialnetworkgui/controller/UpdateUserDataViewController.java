@@ -15,6 +15,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class UpdateUserDataViewController extends AbstractController {
@@ -82,8 +84,10 @@ public class UpdateUserDataViewController extends AbstractController {
             }
             if(isChange)
                 getUserService().update(getConectedUser());
-            if(ok && isChange)
+            if(ok && isChange) {
                 MessageAlert.showSuccesMessage(getStage(), "User data successfully updated");
+                onBackBottonClick(actionEvent);
+            }
             else if(ok)
                 MessageAlert.showErrorMessage(getStage(), "No changes detected");
         }catch (ValidationException | RepoException | ServiceException e) {
@@ -93,38 +97,42 @@ public class UpdateUserDataViewController extends AbstractController {
 
     public void onBackBottonClick(ActionEvent actionEvent) {
         try{
-            AbstractController controller = Utils.setSceneOnStage(getStage(),"myPage-view.fxml","Settings",525,428);
+            AbstractController controller = Utils.setSceneOnStage(getStage(),"myPage-view.fxml","MyPage",525,428);
             Utils.setDataForController(controller,getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
         }catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void loadAvatars(){
+    public List<Image> createAvatarsImages(){
         Image avatar1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/avatars/avatar1.png")));
         Image avatar2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/avatars/avatar2.png")));
         Image avatar3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/avatars/avatar3.png")));
         Image avatar4 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/avatars/avatar4.png")));
         Image avatar5 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/avatars/avatar5.png")));
         Image avatar6 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/avatars/avatar6.png")));
-        ImageView view1 = new ImageView(avatar1);
-        ImageView view2 = new ImageView(avatar2);
-        ImageView view3 = new ImageView(avatar3);
-        ImageView view4 = new ImageView(avatar4);
-        ImageView view5 = new ImageView(avatar5);
-        ImageView view6 = new ImageView(avatar6);
-        view1.setFitWidth(180);
-        view2.setFitWidth(180);
-        view3.setFitWidth(180);
-        view4.setFitWidth(180);
-        view5.setFitWidth(180);
-        view6.setFitWidth(180);
-        view1.setFitHeight(200);
-        view2.setFitHeight(200);
-        view3.setFitHeight(200);
-        view4.setFitHeight(200);
-        view5.setFitHeight(200);
-        view6.setFitHeight(200);
+        List<Image> images = new ArrayList<>();
+        images.add(avatar1);
+        images.add(avatar2);
+        images.add(avatar3);
+        images.add(avatar4);
+        images.add(avatar5);
+        images.add(avatar6);
+        return images;
+    }
+
+    public List<ImageView> createIageViews(List<Image> images){
+        List<ImageView> imageViews = new ArrayList<>();
+        images.forEach(image -> {imageViews.add(new ImageView(image));});
+        return imageViews;
+    }
+
+    public void setWidthHeightForImageViews(List<ImageView> imageViews, double width, double height){
+        imageViews.forEach(image -> {image.setFitWidth(width);image.setFitHeight(height);});
+    }
+
+    public List<Label> createNumberLabels(){
+        List<Label> labels = new ArrayList<>();
         Label nr1 = new Label();
         nr1.setText(Integer.toString(1));
         Label nr2 = new Label();
@@ -137,12 +145,23 @@ public class UpdateUserDataViewController extends AbstractController {
         nr5.setText(Integer.toString(5));
         Label nr6 = new Label();
         nr6.setText(Integer.toString(6));
-        HBox hbox1 = new HBox(nr1,view1,view2,nr2);
-        HBox hbox2 = new HBox(nr3,view3,view4,nr4);
-        HBox hbox3 = new HBox(nr5,view5,view6,nr6);
-        model.add(hbox1);
-        model.add(hbox2);
-        model.add(hbox3);
+        labels.add(nr1);
+        labels.add(nr2);
+        labels.add(nr3);
+        labels.add(nr4);
+        labels.add(nr5);
+        labels.add(nr6);
+        return labels;
+    }
+
+    public void loadAvatars(){
+        List<Image> images = createAvatarsImages();
+        List<ImageView> imageViews = createIageViews(images);
+        setWidthHeightForImageViews(imageViews,180,200);
+        List<Label> numberLabels = createNumberLabels();
+        for(int i=0;i<numberLabels.size();i+=2){
+            model.add(new HBox(numberLabels.get(i),imageViews.get(i),imageViews.get(i+1),numberLabels.get(i+1)));
+        }
     }
 
     @Override

@@ -101,4 +101,5 @@ public class MyPageViewController extends AbstractController implements Observer
             }
         }
     }
+
 }

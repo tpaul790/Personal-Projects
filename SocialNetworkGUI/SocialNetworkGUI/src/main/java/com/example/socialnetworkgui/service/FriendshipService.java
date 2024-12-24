@@ -123,20 +123,10 @@ public class FriendshipService extends Service<Tuple<Integer,Integer>,Friendship
     public Iterable<User> getAllUsersThatAreNotFriends(Integer id) {
         Set<User> allUsers = (Set<User>) userDbRepo.findAll();
         Set<User> friends = (Set<User>) getRepository().findAllFriends(id);
-        Set<Friendship> friendRequests = (Set<Friendship>) getRepository().findAllFriendRequests(id);
-        Set<Friendship> allFriendRequests = (Set<Friendship>) getRepository().findAll();
         allUsers.removeIf(user -> {
             //userul conectat se sterge
             if(user.getId().equals(id))
                 return true;
-            //userii la care le-am trimis eu cereri se sterg
-            for(Friendship friendRequest : allFriendRequests)
-                if(friendRequest.getId().getFirst().equals(id) && friendRequest.getId().getSecond().equals(user.getId()))
-                    return true;
-            //tot useri de la care am cererei se sterg
-            for(Friendship friendship : friendRequests)
-                if(friendship.getId().getFirst().equals(user.getId()))
-                    return true;
             //userii care imi sunt prieteni se sterg
             for(User friend : friends)
                if(user.getId().equals(friend.getId()))

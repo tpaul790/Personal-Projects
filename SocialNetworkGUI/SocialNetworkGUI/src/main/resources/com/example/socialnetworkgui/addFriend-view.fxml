@@ -14,16 +14,12 @@
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             <children>
                 <Button mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
-                <Button layoutX="246.0" layoutY="27.0" mnemonicParsing="false" onAction="#onSendFriendRequestButtonClick" prefHeight="43.0" prefWidth="149.0" text="SendFriendRequest">
-               <font>
-                  <Font size="15.0" />
-               </font></Button>
-            <Label layoutX="12.0" layoutY="36.0" prefHeight="26.0" prefWidth="62.0" text="Search:">
+            <Label layoutX="85.0" layoutY="41.0" prefHeight="26.0" prefWidth="62.0" text="Search:">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="searchTextField" layoutX="80.0" layoutY="36.0" prefHeight="26.0" prefWidth="160.0" />
+            <TextField fx:id="searchTextField" layoutX="153.0" layoutY="41.0" prefHeight="26.0" prefWidth="160.0" />
             </children></AnchorPane>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             <children>

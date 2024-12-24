@@ -41,6 +41,18 @@ public class AddFriendViewController extends AbstractController implements Obser
         tableColumnEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         tableView.setItems(model);
         searchTextField.textProperty().addListener((observable, oldValue, newValue) -> handleFilter());
+        tableView.getSelectionModel().selectedItemProperty().addListener((observer, oldValue, newValue) -> handleSelectUser(newValue));
+    }
+
+    public void handleSelectUser(User user) {
+        try{
+            OtherUserPageController controller = (OtherUserPageController) Utils.setSceneOnStage(getStage(),"otherUserPage-view.fxml","UserPage",525,428);
+            controller.setOtherUser(user);
+            Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
+            getFriendshipService().removeObserver(this);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     private void handleFilter() {
@@ -62,11 +74,6 @@ public class AddFriendViewController extends AbstractController implements Obser
     public void initModel(){
         Iterable<User> usersThatAreNotFriendsWithMe = getFriendshipService().getAllUsersThatAreNotFriends(getConectedUser().getId());
         model.addAll(StreamSupport.stream(usersThatAreNotFriendsWithMe.spliterator(), false).toList());
-    }
-
-    public void onSendFriendRequestButtonClick(ActionEvent actionEvent) {
-        User user = tableView.getSelectionModel().getSelectedItem();
-        getFriendshipService().sendFriendRequest(getConectedUser().getId(), user.getId());
     }
 
     @Override

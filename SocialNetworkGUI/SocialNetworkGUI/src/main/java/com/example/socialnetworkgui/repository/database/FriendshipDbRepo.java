@@ -193,7 +193,7 @@ public class FriendshipDbRepo implements FriendshipRepository {
     public Iterable<User> findAllFriends(int idUser) {
         Set<User> friends = new HashSet<>();
         try(Connection connection = DriverManager.getConnection(url,dbUsername,dbPassword);
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT DISTINCT (U.id),U.username,U.email,U.password,U.role FROM users U INNER JOIN friendship F ON (((\"idUser1\" = id AND \"idUser2\" = ?) OR (\"idUser1\" = ? AND \"idUser2\" = id)) AND id != ?) WHERE \"status\" = 'accepted'")){
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT DISTINCT (U.id),U.username,U.email,U.password,U.role,\"profilePicture\",\"aboutMe\" FROM users U INNER JOIN friendship F ON (((\"idUser1\" = id AND \"idUser2\" = ?) OR (\"idUser1\" = ? AND \"idUser2\" = id)) AND id != ?) WHERE \"status\" = 'accepted'")){
             preparedStatement.setInt(1, idUser);
             preparedStatement.setInt(2, idUser);
             preparedStatement.setInt(3, idUser);
@@ -204,7 +204,11 @@ public class FriendshipDbRepo implements FriendshipRepository {
                 String email = resultSet.getString("email");
                 String password = resultSet.getString("password");
                 String role = resultSet.getString("role");
+                String profilePicture = resultSet.getString("profilePicture");
+                String aboutMe = resultSet.getString("aboutMe");
                 User user = new User(id, username, email, password, role);
+                user.setProfilePicture(profilePicture);
+                user.setAboutMe(aboutMe);
                 friends.add(user);
             }
             resultSet.close();
@@ -249,7 +253,7 @@ public class FriendshipDbRepo implements FriendshipRepository {
 
     @Override
     public Page<User> findAllFriendsOnPage(int userId, Pageable pageable, FiltruDto filtru) {
-        String command = "SELECT DISTINCT (U.id),U.username,U.email,U.password,U.role FROM users U INNER JOIN friendship F ON (((\"idUser1\" = id AND \"idUser2\" = ?) OR (\"idUser1\" = ? AND \"idUser2\" = id)) AND id != ?) WHERE \"status\" = 'accepted' LIMIT ? OFFSET ?";
+        String command = "SELECT DISTINCT (U.id),U.username,U.email,U.password,U.role,\"profilePicture\",\"aboutMe\" FROM users U INNER JOIN friendship F ON (((\"idUser1\" = id AND \"idUser2\" = ?) OR (\"idUser1\" = ? AND \"idUser2\" = id)) AND id != ?) WHERE \"status\" = 'accepted' LIMIT ? OFFSET ?";
         Set<User> friends = new HashSet<>();
         try(Connection connection = DriverManager.getConnection(url, dbUsername, dbPassword);
             PreparedStatement preparedStatement = connection.prepareStatement(command)) {
@@ -265,7 +269,11 @@ public class FriendshipDbRepo implements FriendshipRepository {
                     String email = resultSet.getString("email");
                     String password = resultSet.getString("password");
                     String role = resultSet.getString("role");
+                    String profilePicture = resultSet.getString("profilePicture");
+                    String aboutMe = resultSet.getString("aboutMe");
                     User user = new User(id, username, email, password, role);
+                    user.setProfilePicture(profilePicture);
+                    user.setAboutMe(aboutMe);
                     friends.add(user);
                 }
             }

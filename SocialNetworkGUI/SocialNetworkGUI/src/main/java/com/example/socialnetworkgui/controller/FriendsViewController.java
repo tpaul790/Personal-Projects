@@ -30,7 +30,7 @@ import java.util.stream.StreamSupport;
 
 public class FriendsViewController extends AbstractController implements Observer<FriendshipEntityChangeEvent>{
     private ObservableList<User> model = FXCollections.observableArrayList();
-    private int pageSize = 3;
+    private int pageSize = 7;
     private int curentPage = 1;
     private int nrOfPages;
 
@@ -53,6 +53,7 @@ public class FriendsViewController extends AbstractController implements Observe
         tableColumnEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         tableView.setItems(model);
         curentPageLabel.textProperty().addListener((observable, oldValue, newValue) -> {initModel();handleNextButton();handlePreviousButton();});
+        tableView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> handleSelectedUser(newValue));
     }
 
     public void initializeCurentPageLabel(){
@@ -69,6 +70,17 @@ public class FriendsViewController extends AbstractController implements Observe
             if (nrOfFriends % pageSize != 0) {
                 nrOfPages++;
             }
+        }
+    }
+
+    public void handleSelectedUser(User user){
+        try{
+            FriendPageViewController controller = (FriendPageViewController) Utils.setSceneOnStage(getStage(),"friendPage-view.fxml","FriendPage",525,428);
+            controller.setFriend(user);
+            Utils.setDataForController(controller,getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
+            getFriendshipService().removeObserver(this);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -101,16 +113,6 @@ public class FriendsViewController extends AbstractController implements Observe
             getFriendshipService().removeObserver(this);
         }catch (IOException e){
             e.printStackTrace();
-        }
-    }
-
-    public void onRemoveFriendButtonClick(ActionEvent actionEvent) {
-        User selectedUser = tableView.getSelectionModel().getSelectedItem();
-        if(selectedUser != null){
-            getFriendshipService().delete(selectedUser.getId(), getConectedUser().getId());
-            MessageAlert.showSuccesMessage(getStage(),"Friend succesfuly removed");
-        }else {
-            MessageAlert.showErrorMessage(getStage(),"Please select a user from the table");
         }
     }
 
