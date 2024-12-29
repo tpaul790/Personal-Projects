@@ -79,6 +79,10 @@ public class UserService extends Service<Integer, User, UserDbRepo> implements O
         throw new ServiceException("User not found");
     }
 
+    public boolean login(String hashPassword, String password) {
+        return getRepository().login(hashPassword,password);
+    }
+
     @Override
     public void addObserver(Observer<UserEntityChangeEvent> observer) {
         observers.add(observer);

@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 import jdk.jshell.execution.Util;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
 
 public class LogInController extends AbstractSimpleController{
     @FXML
@@ -59,7 +60,7 @@ public class LogInController extends AbstractSimpleController{
         String password = textFieldPassword.getText();
         try{
             User user = getUserService().findOne(username);
-            if(user.getPassword().equals(password)){
+            if(getUserService().login(user.getPassword(), password)){
                 AccountViewController controller = (AccountViewController) Utils.setSceneOnStage(getStage(),"account-view.fxml","Account",400,430);
                 Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),user);
                 MessageAlert.showSuccesMessage(getStage(),"Successfully logged in!");

@@ -109,24 +109,21 @@ public class UserDbRepo implements Repository2<Integer,User> {
 
     @Override
     public Optional<User> save(User entity) {
-        int rez = -1;
         validator.validate(entity);
         Optional<User> opUser = findOne(entity.getUsername());
         if(opUser.isPresent())
             return opUser;
         try(Connection connection = DriverManager.getConnection(url, dbUsername, dbPassword);
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO \"users\"(username,email,password,role) VALUES (?,?,?,?)")){
+            PreparedStatement preparedStatement = connection.prepareStatement("CALL addUser(?,?,?,?)")){
             preparedStatement.setString(1,entity.getUsername());
             preparedStatement.setString(2,entity.getEmail());
             preparedStatement.setString(3,entity.getPassword());
             preparedStatement.setString(4,entity.getRole());
-            rez = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         }catch (SQLException e){
             e.printStackTrace();
         }
-        if(rez > 0)
-            return Optional.empty();
-        return Optional.of(entity);
+        return Optional.empty();
     }
 
     @Override
@@ -178,4 +175,16 @@ public class UserDbRepo implements Repository2<Integer,User> {
         return 0;
     }
 
+    public boolean login(String hashPassword, String password) {
+        try(Connection connection = DriverManager.getConnection(url, dbUsername, dbPassword);
+            PreparedStatement statement = connection.prepareStatement("SELECT md5(?)")){
+                statement.setString(1,password);
+                ResultSet resultSet = statement.executeQuery();
+                resultSet.next();
+                return resultSet.getString(1).equals(hashPassword);
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
