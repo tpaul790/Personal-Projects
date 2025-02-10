@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import com.example.socialnetworkgui.service.UserService;
 import javafx.fxml.FXML;
 
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -23,12 +24,33 @@ import java.sql.PreparedStatement;
 
 public class LogInController extends AbstractSimpleController{
     @FXML
+    public Label passwordLabel;
+    @FXML
+    public Label usernameLabel;
+    @FXML
     private TextField textFieldUsername;
     @FXML
     private PasswordField textFieldPassword;
 
     @FXML
     private void initialize() {
+        initializeDisableLabelEfect(textFieldUsername,usernameLabel);
+        initializeDisableLabelEfect(textFieldPassword,passwordLabel);
+    }
+
+    public void initializeDisableLabelEfect(TextField textField, Label label){
+        textField.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
+            if (isNowFocused || !textField.getText().isEmpty()) {
+                label.setVisible(false);
+            } else
+                label.setVisible(true);
+        });
+
+        // Pentru a menține label-ul ridicat dacă există text
+        textField.textProperty().addListener((obs, oldText, newText) -> {
+            if(!newText.isEmpty())
+                label.setVisible(false);
+        });
     }
 
     @Override
@@ -44,8 +66,8 @@ public class LogInController extends AbstractSimpleController{
             Parent root = loader.load();
             getStage().setTitle("SignUp");
             getStage().setScene(new Scene(root));
-            getStage().setWidth(290);
-            getStage().setHeight(240);
+            getStage().setWidth(385);
+            getStage().setHeight(385);
             SignUpController controller = loader.getController();
             controller.setServices(getUserService(), getFriendshipService(), getMessageService());
             controller.setStage(getStage());

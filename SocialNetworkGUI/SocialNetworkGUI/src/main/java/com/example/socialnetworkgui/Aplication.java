@@ -54,14 +54,14 @@ public class Aplication extends Application {
         Scene logInScene2 = new Scene(logIn2);
 
         primaryStage.setScene(logInScene1);
-        primaryStage.setWidth(290);
-        primaryStage.setHeight(200);
+        primaryStage.setWidth(340);
+        primaryStage.setHeight(365);
         primaryStage.setTitle("LogIn");
 
         Stage primaryStage2 = new Stage();
         primaryStage2.setScene(logInScene2);
-        primaryStage2.setWidth(290);
-        primaryStage2.setHeight(200);
+        primaryStage2.setWidth(340);
+        primaryStage2.setHeight(365);
         primaryStage2.setTitle("LogIn");
         primaryStage2.show();
 

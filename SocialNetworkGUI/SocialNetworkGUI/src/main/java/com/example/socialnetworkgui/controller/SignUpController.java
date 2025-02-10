@@ -6,6 +6,7 @@ import com.example.socialnetworkgui.utils.Utils;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import com.example.socialnetworkgui.domain.validation.RepoException;
@@ -22,11 +23,39 @@ import java.io.IOException;
 
 public class SignUpController extends AbstractSimpleController{
     @FXML
+    public Label usernameLabel;
+    @FXML
+    public Label emailLabel;
+    @FXML
+    public Label passwordLabel;
+    @FXML
     private TextField textFieldUsername;
     @FXML
     private TextField textFieldEmail;
     @FXML
     private PasswordField textFieldPassword;
+
+    @FXML
+    public void initialize() {
+        initializeDisableLabelEfect(textFieldEmail,emailLabel);
+        initializeDisableLabelEfect(textFieldUsername,usernameLabel);
+        initializeDisableLabelEfect(textFieldPassword,passwordLabel);
+    }
+
+    public void initializeDisableLabelEfect(TextField textField, Label label){
+        textField.focusedProperty().addListener((obs, wasFocused, isNowFocused) -> {
+            if (isNowFocused || !textField.getText().isEmpty()) {
+                label.setVisible(false);
+            } else
+                label.setVisible(true);
+        });
+
+        // Pentru a menține label-ul ridicat dacă există text
+        textField.textProperty().addListener((obs, oldText, newText) -> {
+            if(!newText.isEmpty())
+                label.setVisible(false);
+        });
+    }
 
     @Override
     public void afterSetServices() {
@@ -60,8 +89,8 @@ public class SignUpController extends AbstractSimpleController{
             Parent root = loader.load();
             getStage().setTitle("LogIn");
             getStage().setScene(new Scene(root));
-            getStage().setWidth(290);
-            getStage().setHeight(200);
+            getStage().setWidth(340);
+            getStage().setHeight(365);
             LogInController controller = loader.getController();
             controller.setServices(getUserService(), getFriendshipService(),getMessageService());
             controller.setStage(getStage());
