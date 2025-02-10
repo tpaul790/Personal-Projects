@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers Outlet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+</head>
+
+<body>
+    <!--Header ul/Bara de navigatie-->
+    <section id="header">
+        <a class="logo" href="index.html" >SNK.Outlet</a>
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="shop.html">Magazin</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">Despre</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="active"><i class="fas fa-user"></i></a></li>
+            <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-cart"></i></a></li>
+            <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+    </div>
+
+    <div id="mobile">
+        <a href="cart.html"><i class="far fa-shopping-cart"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+    </div>
+    </section>
+
+    <!--Formualrul de logare-->
+    <section id="log-page">
+
+        <!--Login/Register-->
+        <div class="wrapper">
+            <!--Login-->
+            <!--<span class="icon-close"><i class="far fa-times"></i></span>-->
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa fa-lock"></i></span>
+                        <input type="password" required>
+                        <label>Parolă</label> 
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Ține-mă minte</label>
+                        <a href="#">AmUitatParola</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Nu ai cont?<a href="#" class="register-link"> Înregistrează-te</a></p>
+
+                    </div>
+                </form>
+            </div>
+
+            <!--Register-->
+            <div class="form-box register">
+                <!--<span class="icon-close"><i class="far fa-times"></i></span>-->
+                <h2>Înregistrare</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <input type="text" required>
+                        <label>Nume</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa fa-lock"></i></span>
+                        <input type="password" required>
+                        <label>Parolă</label> 
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Sunt de acord cu termenii & condițiile</label>
+                    </div>
+                    <button type="submit" class="btn">Înregistrare</button>
+                    <div class="login-link">
+                        <p>Ai deja cont?<a href="#" class="register-link"> Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="JAVA/script.js"></script>
+    <script src="JAVA/login.js"></script>
+    <php src="/login.php"></php>
+</body>
+</html>

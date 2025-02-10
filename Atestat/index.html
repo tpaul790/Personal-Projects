@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers Outlet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+</head>
+<!--http://test.cnam.ro:82/phpmyadmin/-->
+
+<body>
+
+    <!--Header ul/Bara de navigatie-->
+    <section id="header">
+        <a class="logo" href="index.html" >SNK.Outlet</a>
+    <div>
+        <ul id="navbar">
+            <li><a class="active" href="index.html">Acasă</a></li>
+            <li><a href="shop.html">Magazin</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">Despre</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html"><i class="fas fa-user"></i></a></li>
+            <li id="lg-bag">
+                <a href="cart.html">
+                    <div class="cart-amount">
+                        <i class="far fa-shopping-cart"></i>
+                        <div id="cartAmount" class="cartAmount">0</div>
+                    </div>
+                </a>
+            </li>
+            <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+    </div>
+
+    <div id="mobile">
+        <a href="cart.html"><i class="far fa-shopping-cart"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+    </div>
+    </section>
+
+    <!--Text in pagina de home-->
+    <section id="hero">
+        <h4>Cumpără în siguranță</h4>
+        <h2>Cel mai bun preț</h2>
+        <h1>La toate produsele</h1>
+        <p>Folosește codul "SNKOUT" pentru <span>15%</span> reducere la prima comandă!</p>
+        <button><strong><a href="shop.html">Cumapără Acum</a></strong></button>
+    </section>
+
+    <!--Avantajele paginii noastre de resell-->
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="IMG/features/f1.png">
+            <h6>Comandă Online</h6>
+        </div>
+        <div class="fe-box">
+            <img src="IMG/features/f2.png">
+            <h6>Salvează Timp</h6>
+        </div>
+        <div class="fe-box">
+            <img src="IMG/features/f3.png">
+            <h6>Salvează Bani</h6>
+        </div>
+        <div class="fe-box">
+            <img src="IMG/features/f4.png">
+            <h6>Promoții</h6>
+        </div>
+        <div class="fe-box">
+            <img src="IMG/features/f5.png">
+            <h6>Clienți Multumiți</h6>
+        </div>
+        <div class="fe-box">
+            <img src="IMG/features/f6.png">
+            <h6>Suport 24/7</h6>
+        </div>
+    </section>
+
+    <!--Cele mai populare produse-->
+    <section id="product1" class="section-p1">
+        <h2>Populare</h2>
+        <p>Cele mai vândute produse</p>
+        <div  id="populare" class="pro-container">
+            
+        </div>
+    </section>
+
+    <!--Banner cu evenimente/reduceri-->
+    <section id="banner" class="section-m1">
+        <h4>Black Week</h4>
+        <h2>Reducere de <span>20%</span> la toate produsele</h2>
+        <h4>18.11-25.11</h4>
+        <button class="normal">Vezi Mai Mult</button>
+    </section>
+
+    <!--Produse care urmeaza sa fie in stoc-->
+    <section id="product1" class="section-p1">
+        <h2>Urmează</h2>
+        <p>Produse cerute de clienți care vor fi curând disponibile</p>
+        <div id="urmeaza" class="pro-container">
+        </div>
+    </section>
+
+    <!--Banner Moncler / Banner fa un tiktok-->
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Oferte interesante </h4>
+            <h2>Fă Un TikTok despre Noi</h2>
+            <span>Poți câștiga o pereche de sneakerși</span>
+            <button class="white"><a href="about.html">Află Mai Mult</a></button>
+        </div>
+        
+        <div class="banner-box bb2">
+            <h4>Toamnă/Iarnă </h4>
+            <h2>Vine sezonul friguros</h2>
+            <span>Cumpără-ți cea mai vânduta geaca a noastră</span>
+            <button class="white" onclick="window.location.href='p13.html';">Cumpără Acum</button>
+        </div>
+        
+    </section>
+
+    <!--Bannere cu categoriile de produse-->
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>SNEAKERȘI</h2>
+        </div>
+
+        <div class="banner-box bb2">
+            <h2>HANORACE</h2>
+        </div>
+
+        <div class="banner-box bb3">
+            <h2>GECI</h2>
+        </div>
+    </section>
+
+    <!--Login pentru a primii detalii pe email-->
+    <section id="newsletter" class="section-p1 section-m1">
+
+        <div class="newstext">
+            <h4>Sing Up</h4>
+            <p>Primești email-uri despre ultimele comenzi și <span>oferte speciale</span></p>
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="email">
+            <button class="normal">Sing Up</button>
+        </div>
+
+    </section>
+    
+    <!--Footer-->
+    <footer id="footer" class="section-p1">
+        <div class="col">
+            <a class="logof logo" href="index.html" >SNK.Outlet</a>
+            <h4>Contact</h4>
+            <p><strong>Adresă:</strong>Strada Petre Ispirescu-bloc 2-scara C</p>
+            <p><strong>Telefon:</strong>0773969929</p>
+            <p><strong>Ore:</strong>10:00 - 22.00, Luni - Sâmbătă</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <a href="https://www.instagram.com/sneakers_outlet.ro/"><i class="fab fa-instagram"></i></a>
+                    <i class="fab fa-facebook"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Despre</h4>
+            <a href="about.html">Despre Noi</a>
+            <a href="about.html">Informații de Livrare</a>
+            <a href="#">Termeni și Condiții</a>
+            <a href="#">Contactează-ne</a>
+        </div>
+
+        <div class="col">
+            <h4>Contul Meu</h4>
+            <a href="#">Sign In</a>
+            <a href="#">Vezi coș</a>
+            <a href="#">Lista de Dorințe</a>
+            <a href="#">Urmărește Comanda</a>
+            <a href="#">Ajutor</a>
+        </div>
+        <div class="col">
+            <h4>Plăți Online Securizate</h4>
+            <img src="IMG/banner/pay.png">
+        </div>
+
+        <div class="copyright">
+            <p>-copyright-</p>
+        </div>
+
+    </footer>
+
+    <script src="JAVA/populare.js"></script>
+    <script src="JAVA/urmeaza.js"></script>
+    <script src="JAVA/script.js"></script>
+</body>
+</html>

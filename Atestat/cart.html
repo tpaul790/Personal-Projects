@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers Outlet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+</head>
+
+<body>
+
+    <!--Header ul/Bara de navigatie-->
+    <section id="header">
+        <a class="logo" href="index.html" >SNK.Outlet</a>
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="shop.html">Magazin</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a  href="about.html">Despre</a></li>
+            <li><a  href="contact.html">Contact</a></li>
+            <li><a href="login.html"><i class="fas fa-user"></i></a></li>
+            <li id="lg-bag">
+                <a href="cart.html" class="active">
+                    <div class="cart-amount">
+                        <i class="far fa-shopping-cart"></i>
+                        <div id="cartAmount" class="cartAmount">4</div>
+                    </div>
+                </a>
+            </li>
+            <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+    </div>
+
+    <div id="mobile">
+        <a href="cart.html"><i class="far fa-shopping-cart"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+    </div>
+    </section>
+
+    <!--Text in pagina de shop-->
+    <section id="page-header" class="about-header">
+        <h2>#Coș</h2>
+        <p>#PRODUSE-LE TALE SUNT AICI</p>
+    </section>
+
+    <!--Produsele din cos-->
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Sterge</td>
+                    <td>Imagine</td>
+                    <td>Produs</td>
+                    <td>Preț</td>
+                    <td>Cod Produs</td>
+                    <td>Cantitate</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="IMG/products/p1/f5.jpg"></td>
+                    <td>Tricou de plaja</td>
+                    <td>149.99RON</td>
+                    <td>QW87</td>
+                    <td>
+                        <div class="buttons">
+                            <i class="far fa-minus"></i>
+                            <div class="quantity">1</div>
+                            <i class="far fa-plus"></i>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="IMG/products/p2/f6.jpg"></td>
+                    <td>Cămașă</td>
+                    <td>239.99RON</td>
+                    <td>RT43</td>
+                    <td>
+                        <div class="buttons">
+                            <i class="far fa-minus"></i>
+                            <div class="quantity">2</div>
+                            <i class="far fa-plus"></i>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="IMG/products/p10/n10.jpg"></td>
+                    <td>Tricou</td>
+                    <td>199.99RON</td>
+                    <td>KL21</td>
+                    <td>
+                        <div class="buttons">
+                            <i class="far fa-minus"></i>
+                            <div class="quantity">1</div>
+                            <i class="far fa-plus"></i>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--Cupon-->
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Aplica Cupon</h3>
+            <div>
+                <input type="text" placeholder="Cuponul Tau">
+                <button class="normal">Aplica</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Total Cos</h3>
+            <table>
+                <tr>
+                    <td>Subtotal Cos</td>
+                    <td>829.96RON</td>
+                </tr>
+                <tr>
+                    <td>Transport</td>
+                    <td>GRATUIT</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>829.96RON</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Treci La Comandă</button>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer id="footer" class="section-p1">
+        <div class="col">
+            <a class="logof logo" href="index.html" >SNK.Outlet</a>
+            <h4>Contact</h4>
+            <p><strong>Adresă:</strong>Strada Petre Ispirescu-bloc 2-scara C</p>
+            <p><strong>Telefon:</strong>0773969929</p>
+            <p><strong>Ore:</strong>10:00 - 22.00, Luni - Sâmbătă</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <a href="https://www.instagram.com/sneakers_outlet.ro/"><i class="fab fa-instagram"></i></a>
+                    <i class="fab fa-facebook"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Despre</h4>
+            <a href="about.html">Despre Noi</a>
+            <a href="about.html">Informații de Livrare</a>
+            <a href="#">Termeni și Condiții</a>
+            <a href="#">Contactează-ne</a>
+        </div>
+
+        <div class="col">
+            <h4>Contul Meu</h4>
+            <a href="#">Sign In</a>
+            <a href="#">Vezi coș</a>
+            <a href="#">Lista de Dorințe</a>
+            <a href="#">Urmărește Comanda</a>
+            <a href="#">Ajutor</a>
+        </div>
+        <div class="col">
+            <h4>Plăți Online Securizate</h4>
+            <img src="IMG/banner/pay.png">
+        </div>
+
+        <div class="copyright">
+            <p>-copyright-</p>
+        </div>
+
+    </footer>
+
+    <script src="JAVA/script.js"></script>
+</body>
+</html>
