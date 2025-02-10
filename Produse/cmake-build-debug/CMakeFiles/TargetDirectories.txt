@@ -1,3 +1,3 @@
-/Users/titienipaul/Library/Mobile Documents/com~apple~CloudDocs/Desktop/PP/Produse/cmake-build-debug/CMakeFiles/Produse.dir
-/Users/titienipaul/Library/Mobile Documents/com~apple~CloudDocs/Desktop/PP/Produse/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/titienipaul/Library/Mobile Documents/com~apple~CloudDocs/Desktop/PP/Produse/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/titienipaul/Desktop/GitHub/Personal-Projects/Produse/cmake-build-debug/CMakeFiles/Produse.dir
+/Users/titienipaul/Desktop/GitHub/Personal-Projects/Produse/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/titienipaul/Desktop/GitHub/Personal-Projects/Produse/cmake-build-debug/CMakeFiles/rebuild_cache.dir

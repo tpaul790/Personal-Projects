@@ -1,4 +1,24 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S "/Users/titienipaul/Library/Mobile Documents/com~apple~CloudDocs/Desktop/PP/Produse" -B "/Users/titienipaul/Library/Mobile Documents/com~apple~CloudDocs/Desktop/PP/Produse/cmake-build-debug"
--- Configuring done (0.1s)
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/titienipaul/Desktop/GitHub/Personal-Projects/Produse -B /Users/titienipaul/Desktop/GitHub/Personal-Projects/Produse/cmake-build-debug
+-- The C compiler identification is AppleClang 15.0.0.15000309
+-- The CXX compiler identification is AppleClang 15.0.0.15000309
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE  
+-- Found OpenGL: /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/System/Library/Frameworks/OpenGL.framework   
+-- Found WrapOpenGL: TRUE  
+-- Configuring done (1.9s)
 -- Generating done (0.0s)
--- Build files have been written to: /Users/titienipaul/Library/Mobile Documents/com~apple~CloudDocs/Desktop/PP/Produse/cmake-build-debug
+-- Build files have been written to: /Users/titienipaul/Desktop/GitHub/Personal-Projects/Produse/cmake-build-debug

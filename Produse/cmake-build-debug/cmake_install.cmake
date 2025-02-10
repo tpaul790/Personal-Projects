@@ -1,4 +1,4 @@
-# Install script for directory: /Users/titienipaul/Library/Mobile Documents/com~apple~CloudDocs/Desktop/PP/Produse
+# Install script for directory: /Users/titienipaul/Desktop/GitHub/Personal-Projects/Produse
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/titienipaul/Library/Mobile Documents/com~apple~CloudDocs/Desktop/PP/Produse/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/titienipaul/Desktop/GitHub/Personal-Projects/Produse/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
