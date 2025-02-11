@@ -43,7 +43,7 @@ public class FriendPageViewController extends AbstractController implements Obse
     @FXML
     public void onBackButtonClick(ActionEvent actionEvent) {
         try {
-            FriendsViewController controller = (FriendsViewController) Utils.setSceneOnStage(getStage(),"friends-view.fxml","Friends",400,430);
+            FriendsViewController controller = (FriendsViewController) Utils.setSceneOnStage(getStage(),"friends-view.fxml","Friends",440,500);
             Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getUserService().removeObserver(this);
         }catch (IOException e){

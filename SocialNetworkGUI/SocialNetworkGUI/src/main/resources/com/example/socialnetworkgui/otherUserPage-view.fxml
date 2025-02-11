@@ -7,15 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.2148829431438127" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="529.0"
-           xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="com.example.socialnetworkgui.controller.OtherUserPageController">
+<SplitPane dividerPositions="0.2148829431438127" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="529.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetworkgui.controller.OtherUserPageController">
     <items>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="340.0">
             <children>
                 <ImageView fx:id="profilePicture" fitHeight="124.0" fitWidth="122.0" layoutX="-8.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true" />
-                <Button layoutY="1.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
-            <Label fx:id="username" layoutX="7.0" layoutY="248.0" text="Username">
+                <Button layoutY="1.0" mnemonicParsing="false" onAction="#onBackButtonClick" stylesheets="@styles.css" text="Back" />
+            <Label fx:id="username" layoutX="-1.0" layoutY="248.0" styleClass="floating-label" stylesheets="@styles.css" text="Username">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
@@ -43,7 +41,7 @@
                             <children>
                                 <AnchorPane layoutX="-1.0" layoutY="232.0" prefHeight="43.0" prefWidth="405.0">
                                     <children>
-                                        <Button layoutX="112.0" layoutY="4.0" mnemonicParsing="false" onAction="#onSendFriendRequestButtonClick" prefHeight="35.0" prefWidth="181.0" text="SendFriendRequest">
+                                        <Button layoutX="133.0" layoutY="3.0" mnemonicParsing="false" onAction="#onSendFriendRequestButtonClick" prefHeight="35.0" prefWidth="181.0" styleClass="button_account" stylesheets="@styles.css" text="SendFriendRequest">
                                             <font>
                                                 <Font size="15.0" />
                                             </font>

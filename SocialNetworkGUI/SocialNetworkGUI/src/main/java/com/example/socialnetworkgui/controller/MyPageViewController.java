@@ -56,7 +56,7 @@ public class MyPageViewController extends AbstractController implements Observer
     @FXML
     public void onBackButtonClick(ActionEvent actionEvent) {
         try {
-            AccountViewController controller = (AccountViewController) Utils.setSceneOnStage(getStage(),"account-view.fxml","Account",400,430);
+            AccountViewController controller = (AccountViewController) Utils.setSceneOnStage(getStage(),"account-view.fxml","Account",480,540);
             Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getUserService().removeObserver(this);
         }catch (IOException e){
@@ -84,7 +84,7 @@ public class MyPageViewController extends AbstractController implements Observer
 
     public void onUpdateDataButtonClick(ActionEvent actionEvent) {
         try {
-            AbstractController controller = Utils.setSceneOnStage(getStage(), "updateUserData-view.fxml", "UpdateUserData", 400, 528);
+            AbstractController controller = Utils.setSceneOnStage(getStage(), "updateUserData-view.fxml", "UpdateUserData", 440, 560);
             Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getUserService().removeObserver(this);
         } catch (IOException e) {

@@ -9,24 +9,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.1972361809045226" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="430.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetworkgui.controller.AddFriendViewController">
+<SplitPane dividerPositions="0.1972361809045226" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="540.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetworkgui.controller.AddFriendViewController">
     <items>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="table-view" stylesheets="@styles.css">
             <children>
-                <Button mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
-            <Label layoutX="85.0" layoutY="41.0" prefHeight="26.0" prefWidth="62.0" text="Search:">
+                <Button layoutY="7.0" mnemonicParsing="false" onAction="#onBackButtonClick" stylesheets="@styles.css" text="Back" />
+            <Label layoutX="40.0" layoutY="60.0" prefHeight="26.0" prefWidth="62.0" text="Search:">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="searchTextField" layoutX="153.0" layoutY="41.0" prefHeight="26.0" prefWidth="160.0" />
+            <TextField fx:id="searchTextField" layoutX="113.0" layoutY="52.0" prefHeight="26.0" prefWidth="160.0" styleClass="input-field" stylesheets="@styles.css" />
             </children></AnchorPane>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="448.0">
             <children>
-                <TableView fx:id="tableView" layoutX="-2.0" layoutY="-5.0" prefHeight="322.0" prefWidth="400.0" style="-fx-font-size: 20;">
+                <TableView fx:id="tableView" layoutX="11.0" layoutY="-5.0" prefHeight="417.0" prefWidth="456.0" style="-fx-font-size: 20;" stylesheets="@styles.css">
                     <columns>
-                        <TableColumn fx:id="tableColumnUsername" prefWidth="150.0" text="Username" />
-                        <TableColumn fx:id="tableColumnEmail" prefWidth="250.0" text="Email" />
+                        <TableColumn fx:id="tableColumnUsername" prefWidth="172.0" text="Username" />
+                        <TableColumn fx:id="tableColumnEmail" prefWidth="271.0" text="Email" />
                     </columns>
                 </TableView>
             </children></AnchorPane>

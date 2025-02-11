@@ -63,7 +63,7 @@ public class AddFriendViewController extends AbstractController implements Obser
 
     public void onBackButtonClick(ActionEvent actionEvent) {
         try {
-            AccountViewController controller = (AccountViewController) Utils.setSceneOnStage(getStage(),"account-view.fxml","Account",400,430);
+            AccountViewController controller = (AccountViewController) Utils.setSceneOnStage(getStage(),"account-view.fxml","Account",480,540);
             Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getFriendshipService().removeObserver(this);
         }catch (IOException e){

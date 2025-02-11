@@ -30,7 +30,7 @@ import java.util.stream.StreamSupport;
 
 public class FriendsViewController extends AbstractController implements Observer<FriendshipEntityChangeEvent>{
     private ObservableList<User> model = FXCollections.observableArrayList();
-    private int pageSize = 7;
+    private int pageSize = 5;
     private int curentPage = 1;
     private int nrOfPages;
 
@@ -108,7 +108,7 @@ public class FriendsViewController extends AbstractController implements Observe
 
     public void onBackButtonClick(ActionEvent actionEvent) {
         try {
-            AccountViewController controller = (AccountViewController) Utils.setSceneOnStage(getStage(),"account-view.fxml","Account",400,430);
+            AccountViewController controller = (AccountViewController) Utils.setSceneOnStage(getStage(),"account-view.fxml","Account",480,540);
             Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getFriendshipService().removeObserver(this);
         }catch (IOException e){

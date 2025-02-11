@@ -49,7 +49,7 @@ public class AccountViewController extends AbstractController implements Observe
 
     private void handleSelectUser(User user) {
         try{
-            ConversationViewController controller = (ConversationViewController) Utils.setSceneOnStage(getStage(),"conversation-view.fxml","Conversation",253,400);
+            ConversationViewController controller = (ConversationViewController) Utils.setSceneOnStage(getStage(),"conversation-view.fxml","Conversation",440,540);
             controller.setConversationUser(user);
             Utils.setDataForController(controller,getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getFriendshipService().removeObserver(this);
@@ -70,7 +70,7 @@ public class AccountViewController extends AbstractController implements Observe
 
     public void onFriendsButtonClick(ActionEvent actionEvent) {
         try{
-            FriendsViewController controller = (FriendsViewController) Utils.setSceneOnStage(getStage(),"friends-view.fxml","Friends",400,430);
+            FriendsViewController controller = (FriendsViewController) Utils.setSceneOnStage(getStage(),"friends-view.fxml","Friends",440,500);
             Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getFriendshipService().removeObserver(this);
         }catch(IOException e){
@@ -90,7 +90,7 @@ public class AccountViewController extends AbstractController implements Observe
 
     public void onAddFriendButtonClick(ActionEvent actionEvent) {
         try{
-            AddFriendViewController controller = (AddFriendViewController) Utils.setSceneOnStage(getStage(),"addFriend-view.fxml","AddFriend",400,430);
+            AddFriendViewController controller = (AddFriendViewController) Utils.setSceneOnStage(getStage(),"addFriend-view.fxml","AddFriend",480,540);
             Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getFriendshipService().removeObserver(this);
         }catch(IOException e){
@@ -110,7 +110,7 @@ public class AccountViewController extends AbstractController implements Observe
 
     public void onGroupMsgButtonClick(ActionEvent actionEvent) {
         try{
-            AbstractController controller = Utils.setSceneOnStage(getStage(),"group-view.fxml","SendToManyUsers",330,415);
+            AbstractController controller = Utils.setSceneOnStage(getStage(),"group-view.fxml","SendToManyUsers",440,500);
             Utils.setDataForController(controller, getStage(), getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getFriendshipService().removeObserver(this);
         } catch (IOException e) {

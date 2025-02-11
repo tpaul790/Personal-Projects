@@ -83,7 +83,7 @@ public class LogInController extends AbstractSimpleController{
         try{
             User user = getUserService().findOne(username);
             if(getUserService().login(user.getPassword(), password)){
-                AccountViewController controller = (AccountViewController) Utils.setSceneOnStage(getStage(),"account-view.fxml","Account",400,430);
+                AccountViewController controller = (AccountViewController) Utils.setSceneOnStage(getStage(),"account-view.fxml","Account",480,540);
                 Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),user);
                 MessageAlert.showSuccesMessage(getStage(),"Successfully logged in!");
             }else{

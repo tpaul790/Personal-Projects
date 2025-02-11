@@ -12,8 +12,8 @@
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="340.0">
          <children>
             <ImageView fx:id="profilePicture" fitHeight="130.0" fitWidth="121.0" layoutX="-5.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" />
-            <Button layoutY="1.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
-            <Label fx:id="username" layoutX="8.0" layoutY="264.0" text="Username">
+            <Button layoutY="1.0" mnemonicParsing="false" onAction="#onBackButtonClick" stylesheets="@styles.css" text="Back" />
+            <Label fx:id="username" layoutX="1.0" layoutY="254.0" styleClass="floating-label" stylesheets="@styles.css" text="Username">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
@@ -51,12 +51,12 @@
                      <children>
                         <AnchorPane layoutX="-1.0" layoutY="232.0" prefHeight="43.0" prefWidth="405.0">
                            <children>
-                              <Button layoutX="93.0" layoutY="4.0" mnemonicParsing="false" onAction="#onLogOutButtonClick" prefHeight="35.0" prefWidth="105.0" text="LogOut">
+                              <Button layoutX="59.0" layoutY="3.0" mnemonicParsing="false" onAction="#onLogOutButtonClick" prefHeight="35.0" prefWidth="105.0" styleClass="button_account" stylesheets="@styles.css" text="LogOut">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="207.0" layoutY="4.0" mnemonicParsing="false" onAction="#onUpdateDataButtonClick" prefHeight="35.0" prefWidth="105.0" text="UpdateData">
+                              <Button layoutX="206.0" layoutY="3.0" mnemonicParsing="false" onAction="#onUpdateDataButtonClick" prefHeight="35.0" prefWidth="105.0" styleClass="button_account" stylesheets="@styles.css" text="UpdateData">
                                  <font>
                                     <Font size="15.0" />
                                  </font>

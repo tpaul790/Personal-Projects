@@ -43,7 +43,7 @@ public class OtherUserPageController extends AbstractController implements Obser
     @FXML
     public void onBackButtonClick(ActionEvent actionEvent) {
         try {
-            AddFriendViewController controller = (AddFriendViewController) Utils.setSceneOnStage(getStage(),"addFriend-view.fxml","AddFriend",400,430);
+            AddFriendViewController controller = (AddFriendViewController) Utils.setSceneOnStage(getStage(),"addFriend-view.fxml","AddFriend",480,540);
             Utils.setDataForController(controller, getStage(),getUserService(),getFriendshipService(),getMessageService(),getConectedUser());
             getUserService().removeObserver(this);
         }catch (IOException e){
