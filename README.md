@@ -1,11 +1,16 @@
 # Personal-Projects
+Atestat: clothing store website
+	- can see how the website look like in the README file from the Atestat directory 
+ 	- HTML,CSS,Java Script and some mySql
 
-Produse:
-	- limbaj C++
-	- interfața grafica folosind qt
-	- persistenta datelor in fișiere	
+Produse: product store application 
+	- can see how the application look like in the README file from the Produse direcotry
+	- programing language C++
+	- GUI using qt
+	- files for data persistence
 
-SocialNetwork
-	- limbaj Java
-	- interfața grafica folosind javaFX
-	- persistenta datelor într-o baza de date postgreSql
+SocialNetwork: social network application
+	- can see how the application look like in the README file from the SocialNetworkGUI direcotry
+	- programing language Java
+	- GUI using JavaFx
+	- postgreSql data base for data persistence
