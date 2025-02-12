@@ -10,6 +10,10 @@ Store page
 
 ![Store Page](https://github.com/tpaul790/Personal-Projects/blob/main/Atestat/README_Images/Screenshot%202025-02-12%20at%2017.40.46.png?raw=true)
 
+Personal product page
+
+![Product page]()
+
 Blog page
 
 ![Blog page](https://github.com/tpaul790/Personal-Projects/blob/main/Atestat/README_Images/Screenshot%202025-02-12%20at%2017.41.02.png?raw=true)
