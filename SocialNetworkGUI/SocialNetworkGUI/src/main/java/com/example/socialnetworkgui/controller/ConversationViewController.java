@@ -12,10 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -30,6 +27,8 @@ public class ConversationViewController extends AbstractController  implements O
     public ListView<Message> messgesList;
     @FXML
     public TextField messageTextField;
+    @FXML
+    public Button sendButton;
 
     @FXML
     public void initialize() {
@@ -44,13 +43,19 @@ public class ConversationViewController extends AbstractController  implements O
                 }else{
                     if(item.getIdSender() == getConectedUser().getId()){
                         setText(item.getMessage()+" :You");
-                        setStyle("-fx-alignment: CENTER-RIGHT; -fx-background-color: lightgreen;-fx-font-weight: bold;-fx-font-size: 15px;");
+                        setStyle("-fx-alignment: CENTER-RIGHT; -fx-background-color: lightgreen;-fx-font-weight: bold;-fx-font-size: 18px; -fx-padding: 8");
                     }else {
                         setText(conversationUser.getUsername() + ": " + item.getMessage());
-                        setStyle("-fx-alignment: CENTER-LEFT; -fx-background-color: lightblue;-fx-font-weight: bold;-fx-font-size: 15px;");
+                        setStyle("-fx-alignment: CENTER-LEFT; -fx-background-color: lightblue;-fx-font-weight: bold;-fx-font-size: 18px; -fx-padding: 8");
                     }
                 }
             }
+        });
+
+        sendButton.setDisable(true);
+
+        messageTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            sendButton.setDisable(newValue.isEmpty());
         });
     }
 

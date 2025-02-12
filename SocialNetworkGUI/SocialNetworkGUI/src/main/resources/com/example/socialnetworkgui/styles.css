@@ -49,6 +49,13 @@
     -fx-font-size: 18px;
 }
 
+.message_list{
+    -fx-background-radius: 8px;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 8px;
+    -fx-padding: 5px;
+}
+
 .list-view {
     -fx-background-color: #f5f5f5;
     -fx-background-radius: 8px;
