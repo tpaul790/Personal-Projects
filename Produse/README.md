@@ -6,6 +6,13 @@ change with the products sorted in the specified order and by the specified attr
 
 ![Main window](https://github.com/tpaul790/Personal-Projects/blob/main/Produse/README_Images/Screenshot%202025-02-12%20at%2018.17.05.png?raw=true)
 
+If you want to filter the products, you can click the "Filter" button and select an attribute 
+using the combo box below. When you click, a new window will open and that window
+it will contain a list of all filtered products. The value for the filter is collected by using 
+the specific text field for the selected atribute. The best part about these windows is that they are observers too. If add, delete or modify a product, the filter windows may be affected.
+
+![Filtre windows](https://github.com/tpaul790/Personal-Projects/blob/main/Produse/README_Images/Screenshot%202025-02-12%20at%2018.40.39.png?raw=true)
+
 When you click the "Cos" button, a new window will open. Here you can see the shopping cart.
 The products can be added to the cart from the main window but also from this window. If you click on
 the 'Statistici' button, another window will open, in this window you can see the number of products
