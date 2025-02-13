@@ -27,5 +27,10 @@
         </Label>
         <Button layoutX="85.0" layoutY="216.0" mnemonicParsing="false" onAction="#onLogInButtonClick" stylesheets="@styles.css" text="LogIn" />
         <Button layoutX="175.0" layoutY="216.0" mnemonicParsing="false" onAction="#onSignUpButtonClick" styleClass="button" text="SignUp" />
+      <Label layoutX="144.0" layoutY="50.0" text="Log In">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
