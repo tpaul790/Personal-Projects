@@ -20,3 +20,9 @@ things about you. You can also logOut or update your data. By clicking the "Back
 account page.
 ![MyPage](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.20.08.png?raw=true)
 ![UpdateData](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.20.31.png?raw=true)
+
+Clicking the "AddFriend" button will open a new window. Here you can see all users who are not already friends
+With you. If you select a user from the table, you are redirected to that user's page where you can see his public data and send him a friend request. User's page is observer if he change his data when i am on his page it will be
+updated instantly.
+![AddFriend](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.13.38.png?raw=true)
+![UserPage](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.21.13.png?raw=true)
