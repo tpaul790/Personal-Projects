@@ -22,7 +22,28 @@ account page.
 ![UpdateData](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.20.31.png?raw=true)
 
 Clicking the "AddFriend" button will open a new window. Here you can see all users who are not already friends
-With you. If you select a user from the table, you are redirected to that user's page where you can see his public data and send him a friend request. User's page is observer if he change his data when i am on his page it will be
+with you. If you select an user from the table, you are redirected to that user page where you can see his/her public data and send him/her a friend request. User's page is observer if he change his data when i am on his page it will be
 updated instantly.
 ![AddFriend](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.13.38.png?raw=true)
 ![UserPage](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.21.13.png?raw=true)
+
+Clicking the "Friends" button will open a new window. Here you can see all users who are already friends with you.
+The data from the table is show in pages, only 5 users can be in the same time on a page.
+If you select an user from the table, you are redirected to that user page where you can see her/his public data or remove him/her.
+![FriendsPage](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.13.57.png?raw=true)
+![FriendPage](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.20.44.png?raw=true)
+
+Clicking the "FriendRequests" button will open a new window. Here you can see all the friend requests you have received and also
+accept or decline the selected one.
+![FriendRequstsPage](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.18.21.png?raw=true)
+
+Clicking the "Group" button will open a new window. Here you can see all the friends you have in a list and send the same message to 
+everyoane you selected. The list allows multiple selection.
+![GroupMessagePage](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.21.33.png?raw=true)
+
+Clicking on an username from the principal page list will open a new window, the conversation window.
+What is a social network app if you can speak with your friends, so after the new page is opened you can see
+all the messages between you and selected user. New messages can be send an they will appear instantly in
+conversation window of the second user. As seen in the picture the color make the user distinguish between the sent or received
+messages.
+![ConversationPages](https://github.com/tpaul790/Personal-Projects/blob/main/SocialNetworkGUI/README_Images/Screenshot%202025-02-15%20at%2013.16.22.png?raw=true)
